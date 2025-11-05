@@ -3389,6 +3389,9 @@ design rules under a new name.</description>
 <attribute name="NAME" x="7.998325" y="48.43991875" size="1.27" layer="26" rot="MR0" align="center"/>
 <attribute name="VALUE" x="11.046325" y="47.16991875" size="1.27" layer="28" rot="MR0" align="center"/>
 </element>
+<element name="MOTOR_HIBRIDACION" library="jst-ph" package="JST-PH6" value="" x="32.128325" y="10.33991875" smashed="yes" rot="R180">
+<attribute name="NAME" x="29.730325" y="13.69781875" size="1.27" layer="25" rot="R180"/>
+</element>
 <element name="RELAY" library="ModularRobot" library_urn="urn:adsk.eagle:library:40964270" package="RELAY12V" package3d_urn="urn:adsk.eagle:package:40964276/3" value="" x="2.918325" y="32.18391875" smashed="yes" rot="R90">
 <attribute name="NAME" x="2.156325" y="32.94591875" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="13.078325" y="33.45391875" size="1.27" layer="27" rot="R90"/>
@@ -3402,6 +3405,7 @@ design rules under a new name.</description>
 <attribute name="POPULARITY" value="3" x="-46.58373125" y="65.20391875" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="21.99626875" y="67.10891875" size="1.778" layer="27" ratio="10" rot="R180"/>
 </element>
+<element name="MOTOR1" library="MOTOR_JGB370" package="MOTOR_JGB370" value="MOTOR_JGB370" x="31.620325" y="5.51391875" smashed="yes" rot="R180"/>
 <element name="MOTOR2" library="MOTOR_JGB370" package="MOTOR_JGB370" value="MOTOR_JGB370" x="49.400325" y="5.51391875" smashed="yes" rot="R180"/>
 <element name="IMU" library="MPU6050" package="MPU6050" package3d_urn="urn:adsk.eagle:package:22409/2" value="" x="47.371" y="46.9265" smashed="yes">
 <attribute name="NAME" x="37.1348" y="48.7553" size="1.27" layer="25" ratio="10"/>
@@ -3437,7 +3441,6 @@ design rules under a new name.</description>
 <element name="MOTOR_2" library="jst-ph" package="JST-PH6" value="" x="1.524" y="-73.406" smashed="yes">
 <attribute name="NAME" x="-5.476" y="-69.9059" size="1.27" layer="25"/>
 </element>
-<element name="MOTOR1" library="MOTOR_JGB370" package="MOTOR_JGB370" value="MOTOR_JGB370" x="2.54" y="-78.486" smashed="yes"/>
 </elements>
 <signals>
 <signal name="SDA">
@@ -3464,6 +3467,8 @@ design rules under a new name.</description>
 <signal name="GND">
 <contactref element="RELAY" pad="2"/>
 <contactref element="D1" pad="2"/>
+<contactref element="MOTOR_HIBRIDACION" pad="3"/>
+<contactref element="MOTOR1" pad="GND"/>
 <contactref element="MOTOR2" pad="GND"/>
 <polygon width="0.6096" layer="16" isolate="0.4064" rank="4">
 <vertex x="2.156325" y="66.72791875"/>
@@ -3538,7 +3543,6 @@ design rules under a new name.</description>
 <contactref element="U$2" pad="IN-"/>
 <contactref element="MOTOR_1" pad="2"/>
 <contactref element="MOTOR_2" pad="2"/>
-<contactref element="MOTOR1" pad="GND"/>
 <wire x1="75.758325" y1="36.84991875" x2="75.758325" y2="49.54991875" width="0" layer="19" extent="1-1"/>
 <wire x1="77.028325" y1="17.79991875" x2="75.758325" y2="36.84991875" width="0" layer="19" extent="1-1"/>
 <wire x1="77.028325" y1="12.71991875" x2="77.028325" y2="17.79991875" width="0" layer="19" extent="1-1"/>
@@ -3560,7 +3564,9 @@ design rules under a new name.</description>
 <wire x1="38.928325" y1="11.44991875" x2="41.468325" y2="11.44991875" width="0" layer="19" extent="1-1"/>
 <wire x1="38.928325" y1="13.98991875" x2="38.928325" y2="11.44991875" width="0" layer="19" extent="1-1"/>
 <wire x1="38.928325" y1="8.90991875" x2="41.468325" y2="8.90991875" width="0" layer="19" extent="1-1"/>
-<wire x1="23.434325" y1="9.41791875" x2="38.928325" y2="8.90991875" width="0" layer="19" extent="1-1"/>
+<wire x1="31.128325" y1="10.33991875" x2="38.928325" y2="11.44991875" width="0" layer="19" extent="1-1"/>
+<wire x1="31.620325" y1="5.51391875" x2="31.128325" y2="10.33991875" width="0" layer="19" extent="1-1"/>
+<wire x1="23.434325" y1="9.41791875" x2="31.128325" y2="10.33991875" width="0" layer="19" extent="1-1"/>
 <wire x1="21.148325" y1="16.02191875" x2="23.434325" y2="9.41791875" width="0" layer="19" extent="1-1"/>
 <wire x1="13.020325" y1="11.44991875" x2="21.148325" y2="16.02191875" width="0" layer="19" extent="1-1"/>
 <wire x1="13.528325" y1="22.37191875" x2="21.148325" y2="16.02191875" width="0" layer="19" extent="1-1"/>
@@ -3594,7 +3600,6 @@ design rules under a new name.</description>
 <wire x1="-5.08" y1="-57.404" x2="-5.08" y2="-52.832" width="0" layer="19" extent="1-1"/>
 <wire x1="4.524" y1="-64.008" x2="-5.08" y2="-57.404" width="0" layer="19" extent="1-1"/>
 <wire x1="4.524" y1="-73.406" x2="4.524" y2="-64.008" width="0" layer="19" extent="1-1"/>
-<wire x1="2.54" y1="-78.486" x2="4.524" y2="-73.406" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="INT_MPU">
 <contactref element="IMU" pad="8"/>
@@ -3741,12 +3746,17 @@ design rules under a new name.</description>
 <wire x1="5.712325" y1="30.40591875" x2="-3.81" y2="-39.37" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+3V3">
+<contactref element="MOTOR_HIBRIDACION" pad="4"/>
+<contactref element="MOTOR1" pad="+5V"/>
 <contactref element="MOTOR2" pad="+5V"/>
 <wire x1="71.260325" y1="29.64391875" x2="62.243325" y2="38.66091875" width="0.6096" layer="1"/>
 <wire x1="62.243325" y1="38.66091875" x2="37.859325" y2="38.66091875" width="0.6096" layer="1"/>
 <wire x1="37.859325" y1="38.66091875" x2="35.049325" y2="38.66091875" width="0.6096" layer="16"/>
 <wire x1="35.049325" y1="38.66091875" x2="31.620325" y2="42.08991875" width="0.6096" layer="16"/>
 <wire x1="31.620325" y1="42.08991875" x2="31.620325" y2="43.35991875" width="0.6096" layer="16"/>
+<wire x1="33.128325" y1="10.33991875" x2="33.128325" y2="6.54591875" width="0.6096" layer="16"/>
+<wire x1="33.128325" y1="6.54591875" x2="34.160325" y2="5.51391875" width="0.6096" layer="16"/>
+<wire x1="34.160325" y1="5.51391875" x2="36.954325" y2="2.71991875" width="0.6096" layer="16"/>
 <wire x1="50.670325" y1="2.71991875" x2="51.940325" y2="3.98991875" width="0.6096" layer="16"/>
 <wire x1="51.940325" y1="3.98991875" x2="51.940325" y2="5.51391875" width="0.6096" layer="16"/>
 <wire x1="36.954325" y1="2.71991875" x2="50.670325" y2="2.71991875" width="0.6096" layer="16"/>
@@ -3763,11 +3773,18 @@ design rules under a new name.</description>
 <wire x1="38.481" y1="48.133" x2="39.878" y2="49.53" width="0.508" layer="1"/>
 <contactref element="MOTOR_2" pad="5"/>
 <contactref element="MOTOR_1" pad="5"/>
-<contactref element="MOTOR1" pad="+5V"/>
-<wire x1="-1.476" y1="-73.406" x2="0" y2="-78.486" width="0" layer="19" extent="1-1"/>
-<wire x1="-1.476" y1="-64.008" x2="-1.476" y2="-73.406" width="0" layer="19" extent="1-1"/>
-<wire x1="36.954325" y1="2.71991875" x2="-1.476" y2="-64.008" width="0" layer="19" extent="16-16"/>
-<wire x1="71.260325" y1="29.64391875" x2="71.260325" y2="8.014325" width="0" layer="19" extent="1-16"/>
+<wire x1="71.260325" y1="8.014325" x2="71.260325" y2="29.64391875" width="0" layer="19" extent="1-16"/>
+<wire x1="-1.476" y1="-64.008" x2="34.160325" y2="5.51391875" width="0" layer="19" extent="1-1"/>
+<wire x1="-1.476" y1="-73.406" x2="-1.476" y2="-64.008" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="ENBM1">
+<contactref element="MOTOR1" pad="ENCA"/>
+<wire x1="36.700325" y1="5.51391875" x2="35.636325" y2="6.57791875" width="0.508" layer="16"/>
+<wire x1="35.636325" y1="9.83191875" x2="35.636325" y2="6.57791875" width="0.508" layer="16"/>
+</signal>
+<signal name="ENAM1">
+<contactref element="MOTOR1" pad="ENCB"/>
+<wire x1="39.240325" y1="5.51391875" x2="37.128325" y2="7.62591875" width="0.508" layer="16"/>
 </signal>
 <signal name="MA_1">
 <polygon width="0.1524" layer="16" isolate="0.4064" thermals="no">
@@ -3856,6 +3873,24 @@ design rules under a new name.</description>
 <vertex x="16.764" y="11.938"/>
 </polygon>
 </signal>
+<signal name="MB_H">
+<contactref element="MOTOR_HIBRIDACION" pad="1"/>
+</signal>
+<signal name="MA_H">
+<contactref element="MOTOR_HIBRIDACION" pad="2"/>
+</signal>
+<signal name="ENBMH">
+<contactref element="MOTOR_HIBRIDACION" pad="5"/>
+<wire x1="35.890325" y1="21.57991875" x2="35.890325" y2="12.62591875" width="0.508" layer="16"/>
+<wire x1="35.890325" y1="12.62591875" x2="35.128325" y2="11.86391875" width="0.508" layer="16"/>
+<wire x1="35.128325" y1="10.33991875" x2="35.128325" y2="11.86391875" width="0.508" layer="16"/>
+<wire x1="35.890325" y1="21.57991875" x2="33.160325" y2="24.30991875" width="0.508" layer="16"/>
+</signal>
+<signal name="ENAMH">
+<contactref element="MOTOR_HIBRIDACION" pad="6"/>
+<wire x1="37.128325" y1="10.33991875" x2="37.128325" y2="21.86591875" width="0.508" layer="16"/>
+<wire x1="37.128325" y1="21.86591875" x2="35.700325" y2="23.29391875" width="0.508" layer="16"/>
+</signal>
 <signal name="B02">
 <contactref element="MOTOR_2" pad="1"/>
 </signal>
@@ -3879,12 +3914,6 @@ design rules under a new name.</description>
 </signal>
 <signal name="C1_R">
 <contactref element="MOTOR_1" pad="3"/>
-</signal>
-<signal name="ENBM1">
-<contactref element="MOTOR1" pad="ENCA"/>
-</signal>
-<signal name="ENAM1">
-<contactref element="MOTOR1" pad="ENCB"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
