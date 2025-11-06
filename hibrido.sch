@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -9931,7 +9931,9 @@ general purpose rectifier, 1 A</description>
 <part name="SWITCH" library="con-ptr500" library_urn="urn:adsk.eagle:library:181" deviceset="AK500/2-H" device="" package3d_urn="urn:adsk.eagle:package:9901/1"/>
 <part name="BAT" library="con-ptr500" library_urn="urn:adsk.eagle:library:181" deviceset="AK500/2-H" device="" package3d_urn="urn:adsk.eagle:package:9901/1"/>
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="U$2" library="userlib" deviceset="CP8-ADJ" device=""/>
+<part name="REG" library="userlib" deviceset="CP8-ADJ" device="">
+<attribute name="SPICEPREFIX" value="E"/>
+</part>
 <part name="LED_RED" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="5MM" package3d_urn="urn:adsk.eagle:package:15799/2"/>
 <part name="LED_GREEN" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="5MM" package3d_urn="urn:adsk.eagle:package:15799/2"/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2"/>
@@ -10095,7 +10097,7 @@ general purpose rectifier, 1 A</description>
 <instance part="GND10" gate="1" x="-483.87" y="95.25" smashed="yes">
 <attribute name="VALUE" x="-486.41" y="92.71" size="1.778" layer="96"/>
 </instance>
-<instance part="U$2" gate="G$1" x="-337.82" y="114.3" smashed="yes"/>
+<instance part="REG" gate="G$1" x="-337.82" y="114.3" smashed="yes"/>
 <instance part="LED_RED" gate="G$1" x="-261.62" y="127" smashed="yes">
 <attribute name="NAME" x="-258.064" y="122.428" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="-255.905" y="122.428" size="1.778" layer="96" rot="R90"/>
@@ -10249,7 +10251,7 @@ general purpose rectifier, 1 A</description>
 <wire x1="-236.22" y1="105.41" x2="-236.22" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="IN-"/>
+<pinref part="REG" gate="G$1" pin="IN-"/>
 <wire x1="-352.806" y1="111.76" x2="-355.6" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 <wire x1="-364.49" y1="100.33" x2="-355.6" y2="100.33" width="0.1524" layer="91"/>
@@ -10271,7 +10273,7 @@ general purpose rectifier, 1 A</description>
 <label x="-304.8" y="-76.2" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="OUT-"/>
+<pinref part="REG" gate="G$1" pin="OUT-"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="-322.326" y1="111.76" x2="-322.326" y2="100.33" width="0.1524" layer="91"/>
 <wire x1="-322.326" y1="100.33" x2="-316.23" y2="100.33" width="0.1524" layer="91"/>
@@ -10541,7 +10543,7 @@ general purpose rectifier, 1 A</description>
 <label x="-416.56" y="129.54" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="IN+"/>
+<pinref part="REG" gate="G$1" pin="IN+"/>
 <wire x1="-352.806" y1="116.84" x2="-355.6" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="-355.6" y1="116.84" x2="-355.6" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="-355.6" y1="121.92" x2="-358.14" y2="121.92" width="0.1524" layer="91"/>
@@ -10627,7 +10629,7 @@ general purpose rectifier, 1 A</description>
 </net>
 <net name="5V" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="OUT+"/>
+<pinref part="REG" gate="G$1" pin="OUT+"/>
 <wire x1="-322.326" y1="116.84" x2="-312.42" y2="116.84" width="0.1524" layer="91"/>
 <label x="-312.42" y="116.84" size="1.27" layer="95" xref="yes"/>
 </segment>
