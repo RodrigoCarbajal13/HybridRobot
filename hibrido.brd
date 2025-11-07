@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="10" unitdist="mil" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="10" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -1728,7 +1728,15 @@ MECATRÓNICA</text>
 <text x="74.93" y="78.994" size="0.6096" layer="25">P25</text>
 <text x="68.834" y="73.152" size="0.6096" layer="25" rot="R90">D5</text>
 <text x="75.438" y="72.644" size="0.6096" layer="25" rot="R90">GND</text>
-<text x="23.876" y="23.368" size="1.778" layer="25">ROBOT HÍBRIDO</text>
+<text x="32.766" y="23.114" size="1.778" layer="25">ROBOT HÍBRIDO</text>
+<text x="20.828" y="23.368" size="0.508" layer="25">Rodrigo Carbajal
+Onassis Jesus
+David Ching
+Alexander Vasquez
+Atilio Molero
+Zhaid Condori
+Renzo Aliaga</text>
+<text x="65.532" y="47.498" size="1.016" layer="25"></text>
 </plain>
 <libraries>
 <library name="con-ptr500" urn="urn:adsk.eagle:library:181">
@@ -3663,10 +3671,10 @@ design rules under a new name.</description>
 <attribute name="POPULARITY" value="93" x="27.686" y="65.278" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="29.4894" y="68.4784" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
-<element name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="" x="25.908" y="51.816" smashed="yes">
-<attribute name="POPULARITY" value="36" x="25.908" y="51.816" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="25.908" y="51.816" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="23.6474" y="51.181" size="1.27" layer="27" ratio="10"/>
+<element name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="" x="25.908" y="52.07" smashed="yes">
+<attribute name="POPULARITY" value="36" x="25.908" y="52.07" size="1.778" layer="27" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="25.908" y="52.07" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="23.6474" y="51.435" size="1.27" layer="27" ratio="10"/>
 </element>
 <element name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" package="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="" x="33.782" y="61.214" smashed="yes" rot="R90">
 <attribute name="POPULARITY" value="36" x="33.782" y="61.214" size="1.778" layer="27" rot="R90" display="off"/>
@@ -4481,8 +4489,8 @@ design rules under a new name.</description>
 <signal name="N$1">
 <contactref element="R1" pad="2"/>
 <contactref element="LED_RED" pad="K"/>
-<wire x1="30.988" y1="51.816" x2="27.686" y2="55.118" width="0.4064" layer="16"/>
-<wire x1="27.686" y1="55.626" x2="27.686" y2="55.118" width="0.4064" layer="16"/>
+<wire x1="30.988" y1="52.07" x2="27.686" y2="55.372" width="0.4064" layer="16"/>
+<wire x1="27.686" y1="55.626" x2="27.686" y2="55.372" width="0.4064" layer="16"/>
 </signal>
 <signal name="N$4">
 <contactref element="R2" pad="2"/>
